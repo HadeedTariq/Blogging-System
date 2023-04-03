@@ -1,0 +1,89 @@
+.upload-blog{
+    width: 100%;
+    position: relative;
+}
+.success-msg{
+    position: fixed;
+    left: 40%;
+    top: 6.5%;
+    box-shadow: 1px 1px 3px 1px green;
+    background-color: rgb(6, 6, 6);
+    color: white;
+    padding: 6px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+}
+.success-msg p{
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 15px;
+}
+.blog-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0;
+}
+.title input{
+    width: 70vmax;
+    margin: 8px 0;
+    padding: 5px 8px;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.title h3{
+    font-size: 23px;
+    margin-top: 8px;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.desc textarea{
+    width: 70vmax;
+    height: 500px;
+    resize: none;
+    padding: 8px;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-y: scroll;
+}
+.upload button{
+    font-size: 18px;
+    padding: 5px 10px;
+    background-color: rgb(27, 203, 209);
+    color: white;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.title p{
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 5px 0;
+    color: red;
+    transition: 0.5s;
+}
+.file{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    box-shadow: 2px 2px 2px 1px rgba(130, 131, 132, 0.709);
+    padding: 8px;
+    position: relative;
+    width: 70vmax;
+    height: 400px;
+}
+.file input{
+    position: absolute;
+    top: 30%;
+    height: 0;
+    width: 0;
+    z-index: 3;
+}
+.file-logo{
+    cursor: pointer;
+}
