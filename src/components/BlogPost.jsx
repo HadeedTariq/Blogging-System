@@ -1,24 +1,45 @@
 import React, { useEffect, useState } from 'react'
 import { db } from '../firebase'
 import { collection, getDocs } from 'firebase/firestore'
+import { useNavigate } from 'react-router-dom'
 const BlogPost = ({ home }) => {
+  const navigate=useNavigate()
   const [posts, setPosts] = useState([])
+  let [data,setData]=useState([])
   useEffect(() => {
-    let data=[]
     const GetDoc=async()=>{
       const querySnapshot = await getDocs(collection (db, "blogpost"));
       querySnapshot.forEach((doc) => {
         data.push(doc.data())
       });
       if(home){
-        data=data.slice(0,8)
+        setPosts(data.slice(0,8))
+        return
       }
       setPosts(data)
+      setData(data)
   }
   GetDoc()
   }, [])
+  const searchBlog=(e)=>{
+    const inp=e.target.value;
+    if(inp){
+    const filterData=posts?.filter((post)=>
+     post.title.toLowerCase().includes(inp.toLowerCase())
+    )
+    setPosts(filterData)
+    }
+    else{
+      setPosts(data)
+    }
+  }
   return (
     <>
+    {!home &&
+    <div className="search">
+      <input type="search" placeholder='Search here' onChange={searchBlog}/>
+    </div>
+    }
       <div className="home">
         {
           posts.map((post, index) =>
@@ -27,7 +48,7 @@ const BlogPost = ({ home }) => {
               <div className="posts">
                 <h3>{post.title.slice(0,40)}...</h3>
                 <p>{post.description.slice(0, 100)}...</p>
-                <button>Explore More</button>
+                <button onClick={()=>navigate(`/blog/${post.id}`)}>Explore More</button>
               </div>
 
             </div>

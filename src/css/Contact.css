@@ -1,0 +1,39 @@
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.contact-desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    width: 100%;
+}
+.contact-desc input{
+    padding: 8px 5px;
+    margin: 8px 0;
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 90%;
+}
+.contact-desc textarea{
+    width: 90%;
+    resize: none;
+    height: 300px;
+    margin: 8px 0;
+    font-size: 18px;
+    padding: 5px;
+}
+.contact-desc button{
+    margin: 5px 0;
+    padding: 4px 8px;
+    border: none;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 8px;
+    background-color: aqua;
+    color: white;
+    cursor: pointer;
+}

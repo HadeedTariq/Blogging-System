@@ -1,0 +1,40 @@
+.blog-detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+}
+.blog-detail img{
+    width: 80vw;
+    height: 400px;
+    object-fit: fill;
+}
+.blog-detail h1{
+    font-size: 25px;
+    font-weight: 400;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 5px 0;
+    color: red;
+}
+.blog-detail h3{
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 5px;
+    padding: 5px;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    margin: 8px 0;
+}
+.search input{
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 18px;
+    width: 80%;
+    box-shadow: 1px 1px 3px 3px rgba(174, 172, 172, 0.73);
+    outline: none;
+}

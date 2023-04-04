@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter as Router,Routes, Route, Navigate } from 'react-router-dom'
-import { Contact, Home, UploadBlog } from './pages'
+import { Blog, Contact, Home, UploadBlog } from './pages'
 import { BlogPost, NavBar } from './components'
 import { useBlog } from './context/store'
 const App = () => {
@@ -26,6 +26,7 @@ const App = () => {
         <Route path='/uploadBlog' element={
         <Protectroutes><UploadBlog/></Protectroutes>
         }/>
+        <Route path='/blog/:id' element={<Blog/>}/>
       </Routes>
      </Router>
      </div>

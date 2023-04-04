@@ -1,10 +1,10 @@
-import { Link, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 import '../css/NavBar.css'
 import { useBlog } from '../context/store'
 import { signInWithPopup, signOut } from 'firebase/auth'
 import { auth, provider } from '../firebase'
 import { blogState } from '../context/reducer'
-import { RxMoon, RxSun } from 'react-icons/rx'
+import { RxMoon, RxSun,RxHamburgerMenu,RxCrossCircled } from 'react-icons/rx'
 import { useState } from 'react'
 const NavBar = () => {
   const navigate=useNavigate()
@@ -14,7 +14,6 @@ const NavBar = () => {
     const { user } = await signInWithPopup(auth, provider)
     localStorage.setItem('user-info',JSON.stringify(user))
     dispatch({ type: blogState.SETUSER, user: user })
-    console.log(user);
   }
   const navigator=(link)=>{
     navigate(link)
@@ -36,7 +35,6 @@ const NavBar = () => {
           <h1>Next Bloggers</h1>
           <ul>
             <li onClick={()=>navigator('/')}>Home</li>
-            <li onClick={()=>navigator('/contact')}>Contact</li>
             <li onClick={()=>navigator('/blog')}>Blogs</li>
             { !light?
             (<li onClick={()=>changeMode('#1c1b23',"white")}><RxSun size={19} cursor={'pointer'}/></li>):
