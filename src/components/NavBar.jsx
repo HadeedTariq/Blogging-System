@@ -36,7 +36,7 @@ const NavBar = () => {
           <ul>
             <li onClick={()=>navigator('/')}>Home</li>
             <li onClick={()=>navigator('/blog')}>Blogs</li>
-            { !light?
+            { light?
             (<li onClick={()=>changeMode('#1c1b23',"white")}><RxSun size={19} cursor={'pointer'}/></li>):
             (<li onClick={()=>changeMode("white",'black')}><RxMoon size={19} cursor={'pointer'}/></li>)
 }
