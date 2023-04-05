@@ -59,3 +59,12 @@
     width: 35px;
     border-radius: 50%;
 }
+@media screen and (max-width:620px) {
+    .nav-bar{
+        height: 120px;
+    }
+    .nav{
+        flex-direction: column;
+        height: 120px;
+    }
+}
